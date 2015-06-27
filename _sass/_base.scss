@@ -18,9 +18,19 @@ body {
     font-size: $base-font-size;
     line-height: $base-line-height;
     font-weight: 300;
-    color: $text-color;
+    
+    /* color: $text-color; */
+    color: #e4e4e4;
+
     background-color: $background-color;
     -webkit-text-size-adjust: 100%;
+
+    text-shadow: 0 1px 3px rgba(0,0,0,.5);
+    -webkit-font-feature-settings: "kern" 1;
+    -moz-font-feature-settings: "kern" 1;
+    -o-font-feature-settings: "kern" 1;
+    font-feature-settings: "kern" 1;
+    font-kerning: normal;
 }
 
 
@@ -93,11 +103,13 @@ a {
     text-decoration: none;
 
     &:visited {
-        color: darken($brand-color, 15%);
+        /* color: darken($brand-color, 15%); */
+	color: #4889df;
     }
 
     &:hover {
-        color: $text-color;
+        /* color: $text-color; */
+	color: #d1d1d1; 
         text-decoration: underline;
     }
 }
