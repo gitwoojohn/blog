@@ -6,6 +6,7 @@ category: etc
 tags: [posting, cook blog]
 ---
 
+## 루비 코드
 {% highlight ruby %}
 if "fablic".length > 3
   puts 'ya'
