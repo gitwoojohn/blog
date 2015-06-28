@@ -7,7 +7,7 @@ tags: [posting, cook blog]
 ---
 
 <code>루비 코드</code>
-{% highlight linenos ruby %}
+{% highlight ruby linenos %}
 if "fablic".length > 3
   puts 'ya'
 else
