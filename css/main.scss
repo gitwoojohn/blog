@@ -8,7 +8,7 @@
 // Our variables
 $bordertop-yellow: #fc0;
 
-$base-font-family: 맑은 고딕, colsolas, Helvetica, Arial, sans-serif;
+$base-font-family: consolas, Helvetica, Arial, sans-serif;
 $base-font-size:   16px;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
@@ -49,7 +49,8 @@ $on-laptop:        800px;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
+        "mixins",
         "base",
         "layout",
-        "syntax-highlighting"
+        "syntax-highlighting"	
 ;
