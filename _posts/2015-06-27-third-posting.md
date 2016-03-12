@@ -2,7 +2,7 @@
 layout: post
 title: "세번째 포스팅"
 description: ""
-category: blog
+category: post
 tags: [blog, myblog]
 ---
 
