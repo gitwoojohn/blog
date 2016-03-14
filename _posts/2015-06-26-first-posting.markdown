@@ -1,12 +1,39 @@
 ---
 layout: post
+permalink: /2016/Exam01
 title: "첫번째 포스팅"
 description: ""
-category: etc
+category: post
 tags: [posting, cook blog]
 ---
 
-<p><code>루비 코드</code></p>
+` 루비 코드 `
+
+` 1. 깃허브 페이지에서 새로운 저장소(New Repository)를 만들고 클론 주소를 복사 `
+
+{% highlight ruby %}
+def print_hi(name)
+  puts "Hi, #{name}"
+end
+print_hi('Tom')
+#=> prints 'Hi, Tom' to STDOUT.
+{% endhighlight %}
+
+{% highlight bash %}
+~ $ jekyll build
+# => ./_site 에 현재 폴더의 내용으로 사이트를 생성합니다
+
+~ $ jekyll build --destination <destination>
+# => <destination> 에 현재 폴더의 내용으로 사이트를 생성합니다
+
+~ $ jekyll build --source <source> --destination <destination>
+# => <destination> 에 <source> 폴더의 내용으로 사이트를 생성합니다
+
+~ $ jekyll build --watch
+# => ./_site 에 현재 폴더의 내용으로 사이트를 생성하고,
+#    변경사항을 감지하면 자동으로 다시 생성합니다.
+{% endhighlight %}
+
 {% highlight ruby linenos %}
 if "fablic".length > 3
   puts 'ya'
@@ -19,7 +46,7 @@ end
   <h5>ProTip™: UTF-8로 작성된 CSS나 기타 파일들을 JeKyll에서 실시간 수정 할 때</h5>
   <p>
     커맨드 프롬프트에서 UTF-8 코드 페이지로 변경 해야 하는데 변경 방법은
-    <code>  chcp 65001 </code> 로 입력하면 <br>UTF-8 코드페이지로 변경.
+    <code> chcp 65001 </code> 로 입력하면 <br>UTF-8 코드페이지로 변경.
   </p>
 </div>
 

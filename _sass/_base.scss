@@ -1,6 +1,8 @@
 /**
  * Reset some basic elements
  */
+
+
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
 dl, dd, ol, ul, figure {
@@ -13,6 +15,17 @@ dl, dd, ol, ul, figure {
 /**
  * Basic styling
  */
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+code, kbd, pre, samp {
+  font-family: monospace,monospace;
+  font-size: 1em; }
+
+/*
 body {
     font-family: $base-font-family;
     font-size: $base-font-size;
@@ -20,7 +33,7 @@ body {
     
     font-weight: 300;
     
-    /* color: $text-color; */
+    color: $text-color;
     color: #e4e4e4;
 
     background-color: $background-color;
@@ -33,6 +46,22 @@ body {
     font-feature-settings: "kern" 1;
     font-kerning: normal;
 }
+*/
+
+body {
+font: 300 21px Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #ddd;
+  background-color: #333;
+  /* border-top: 5px solid #fc0; */
+  -webkit-box-shadow: inset 0 3px 30px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0 3px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 3px 30px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  -webkit-font-feature-settings: "kern" 1;
+  -moz-font-feature-settings: "kern" 1;
+  -o-font-feature-settings: "kern" 1;
+  font-feature-settings: "kern" 1;
+  font-kerning: normal; }
 
 article {
   background-color: #4C4C4C;
@@ -141,25 +170,31 @@ blockquote {
 }
 
 
-
 /**
  * Code formatting
  */
+
+/* Code Highlighting */
+
 pre,
 code {
-    font-size: 15px;
-    /* border: 1px solid $grey-color-light; */
-    border: 1px solid #171515;
-    border-radius: 5px;
-    /* background-color: #eef; */    
-    background-color: #333;
-    color: #fff;
+  white-space: pre;
+  display: inline-block;
+  margin: 0;
+  font: 14px/1.8em Menlo, Consolas, "Courier New", Courier, "Liberation Mono", monospace;
+  padding: 0 0.5em; }
 
+@media (min-width: 768px) {
+  pre, code {
+     font-size: 16px; } }
 
-}
-
-/*.highlight, .note>code */
-p>pre, p>code, li>code, h5>code, {
+.highlight,
+p > pre, 
+p > code, 
+p > nobr > code,
+li > code, 
+h5 > code, 
+.note > code {
           background-color: #2b2b2b;
           color: #fff;
           @include border-radius(5px);
@@ -168,8 +203,6 @@ p>pre, p>code, li>code, h5>code, {
           0 -1px 0 rgba(0,0,0,.5));
 }
 
-
-/*
 .note code {
   background-color: #333;
   background-color: rgba(0,0,0,0.2);
@@ -184,23 +217,38 @@ p>pre, p>code, li>code, h5>code, {
   width: 100%;
   overflow: auto;
 }
+
+
+/*
+pre,
+code {
+    font-size: 15px;
+    border: 1px solid #171515;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+}
 */
 
+/*
 code {
     padding: 1px 5px;
 }
+*/
 
+/* 가로 스크롤 보여주는 쓰잘떼기 없는 코드*/
+/*
 pre {
     padding: 8px 12px;
     overflow-x: scroll;
-
+    
     > code {
         border: 0;
         padding-right: 0;
         padding-left: 0;
     }
 }
-
+*/
 
 
 /**
