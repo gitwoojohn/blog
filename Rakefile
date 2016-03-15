@@ -9,7 +9,7 @@ CONFIG = {
   'themes' => File.join(SOURCE, "_includes", "themes"),
   'layouts' => File.join(SOURCE, "_layouts"),
   'posts' => File.join(SOURCE, "_posts"),
-  'post_ext' => "md",
+  'post_ext' => "markdown",
   'theme_package_version' => "0.1.0"
 }
 
@@ -64,12 +64,13 @@ task :post do
   open(filename, 'w') do |post|
     post.puts "---"
     post.puts "layout: post"
+    post.puts "permalink: /2016/#{title}"
     post.puts "title: \"#{title.gsub(/-/,' ')}\""
     post.puts 'description: ""'
     post.puts "category: #{category}"
     post.puts "tags: #{tags}"
     post.puts "---"
-    post.puts "{% include JB/setup %}"
+    # post.puts "{% include JB/setup %}"
   end
 end # task :post
 
